@@ -1,0 +1,25 @@
+.btn {
+	background-color: #ddd;
+	border: none;
+	border-radius: 6px;
+	padding: 1em 2.5em;
+	color: black;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	margin: 4px 2px;
+}
+
+.btn-cta {
+	background-color: $primaryInverted;
+	color: #fff;
+	box-shadow: 0 0 3px 0 $primaryInverted;
+
+	transition: 0.7s;
+	&:hover {
+		background-color: #fff;
+		box-shadow: 0 0 3px 0 #fff;
+		color: $primaryInverted;
+		font-size: 18px;
+	}
+}

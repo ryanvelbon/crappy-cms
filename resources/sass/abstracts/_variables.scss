@@ -1,0 +1,32 @@
+@use 'sass:color';
+
+$alpha: #6e358e;
+$bravo: #ed1b28;
+/*$charlie: #55c;*/
+/*$delta:*/
+
+$primary: color.mix($alpha, $bravo);
+$primaryLight: color.adjust($primary, $lightness: 10%);
+$primaryDark: color.adjust($primary, $lightness: -10%);
+$primaryInverted: color.invert($primary);
+
+
+$gray1: #241E12;
+$gray2: #706C64;
+$gray3: #B1ACA3;
+/*#353640*/
+/*#62636b*/
+
+$test1: pink;
+$test2: lightgreen;
+$test3: lightblue;
+$test4: #ffc;
+$test5: #cff;
+
+/* Comment out these lines when working on layout*/
+$test1: #fff0;
+$test2: #fff0;
+$test3: #fff0;
+$test4: #fff0;
+$test5: #fff0;
+

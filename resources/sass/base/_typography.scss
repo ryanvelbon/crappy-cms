@@ -1,0 +1,51 @@
+
+html {
+	font-family: proxima-nova, arial, Sans-serif;
+}
+
+::selection {
+	background: $primary;
+	color: #fff;
+}
+
+:root {
+	font-size: 100%;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; text-transform: uppercase; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1rem; text-transform: uppercase; }
+h6 { font-size: 1rem; }
+p { font-size: 1rem; }
+
+h1, h2, h3, h4, h5, h6 {
+
+	margin: 0;
+	padding: 0;
+	color: $primary;
+}
+
+p {
+	letter-spacing: 0.04em;
+	line-height: 1.6;
+	margin-bottom: 1.5em;
+	color: $gray1;
+}
+
+small {
+	color: $gray2;
+}
+
+
+@media screen and (min-width: 768px) {
+	:root { font-size: 110%; }
+}
+@media screen and (min-width: 992px) {
+	:root { font-size: 120%; }
+
+}
+@media screen and (min-width: 1200px) {
+	:root { font-size: 130%; };
+}

@@ -1,0 +1,187 @@
+.row {
+	/*background-color: yellow;*/
+	text-align: center;
+	/*padding: 50px 0 50px 0;*/
+
+	@media screen and (min-width: 768px) {
+		padding: 25px 0 25px 0;
+	}
+}
+
+.row.row-bg {
+	background-color: $primary;
+	::selection {
+		background-color: $bravo;
+	};
+	* {
+		color: white;
+	}
+}
+
+.row .row-content {
+
+	display: inline-block;
+
+	background-color: $test4;
+
+	width: 100%;
+
+	@media screen and (min-width: 768px) {
+		width: 90%;
+	}
+
+	@media screen and (min-width: 992px) {
+		width: 80%;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 70%;
+	}
+}
+
+#serviceCardsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	.service-card {
+		background-color: $test5;
+		width: 300px;
+		padding: 10px 15px;
+		margin: 2px;
+		text-align: center;
+
+		.card-icon {
+			background-color: $test1;
+			color: $primary;
+			font-size: 60px;
+		}
+		.card-title {
+			background-color: $test2;
+			margin: 20px 0px;
+		}
+		.card-body {
+			background-color: $test3;
+		}
+	}
+}
+
+.zigzag {
+	display: flex;
+	flex-wrap: wrap;
+
+	@media screen and (min-width: 768px) {
+		flex-wrap: nowrap;
+		align-items: center;
+	}
+
+	.zigzag-text {
+		padding: 20px 30px 10px 30px;
+		background-color: $test1;
+	}
+	.zigzag-img {
+		background-color: $test3;
+		img {
+			width: 100%;
+			min-width: 300px;
+		}
+	}
+}
+
+.hero {
+	::selection {
+		background-color: white;
+		color: $primary;
+	}
+	strong {
+		color: yellow;
+	}
+}
+
+#hero1 {
+	height: 700px;
+	.hero-image {
+		/*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.w3schools.com/howto/photographer.jpg");*/
+		background-image: linear-gradient(to top right, rgba($bravo, 0.85), rgba($alpha, 0.85)), url("https://www.w3schools.com/howto/photographer.jpg");
+		
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		.hero-text {
+			width: 90%;
+			background-color: $test2;
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			/*color: white; specificity!*/
+
+			.hero-h1 {
+				font-size: 70px;
+				line-height: 0.9;
+				padding-bottom: 0.2em;
+				color: white;
+			}
+			.hero-h2 {
+				font-size: 28px;
+				color: white;
+			}
+			.btn {
+				margin-top: 30px;
+			}
+
+			@media screen and (min-width: 768px) {
+				width: 70%;
+				text-align: left;
+				/*top: 50%;*/
+				/*left: 50%;*/
+				transform: translate(-65%, -50%);
+
+				.hero-h1 {
+					font-size: 10vw;
+				}
+				.hero-h2 {
+					font-size: 3vw;
+				}
+			}
+			@media screen and (min-width: 1200px) {
+				.hero-h1 {
+					font-size: 150px;
+				}
+				.hero-h2 {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+}
+
+#hero2 {
+	height: 400px;
+	.hero-image {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.w3schools.com/howto/photographer.jpg");
+		background-image: linear-gradient(to top right, rgba($primary, 0.85), rgba($primary, 0.85)), url("https://www.w3schools.com/howto/photographer.jpg");
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		.hero-text {
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: white;
+			h1 {
+				color: white;
+			}
+			p {
+				color: white;
+			}
+		}
+	}
+}
