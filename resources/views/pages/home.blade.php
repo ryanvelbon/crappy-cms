@@ -6,7 +6,7 @@
 			<div class="hero-text">
 				<h1 class="hero-h1">Ipsum numquam</h1>
 				<h2 class="hero-h2">Inventore quia voluptas a <strong>voluptatum</strong> rerum. Quasi id ad inventore odio amet sed perferendis eos.</h2>
-				<button class="btn btn-cta">Enroll</button>
+				<button class="btn btn-cta">Start a Project</button>
 			</div>
 		</div>
 	</section>
