@@ -10,8 +10,8 @@ class CreateCareersTable extends Migration
     {
         Schema::create('careers', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 30);
-            $table->string('slug', 40);
+            $table->string('title', 30)->unique();
+            $table->string('slug', 40)->unique();
             $table->string('body', 3000);
             $table->boolean('available')->default(1);
         });

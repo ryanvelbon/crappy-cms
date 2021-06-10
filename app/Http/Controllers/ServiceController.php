@@ -3,81 +3,60 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class ServiceController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('services.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $service = new Service();
+
+        $service->title = $request['title'];
+        $service->slug = $request['slug'];
+        $service->icon = $request['icon'];
+        $service->description_short = $request['short-desc'];
+        $service->description_long = $request['long-desc'];
+
+        if($request->has('available')){
+            $service->available = 1;
+        }else{
+            $service->available = 0;
+        }
+
+        $service->save();
+
+        return Redirect::back()->with('msg', 'Success! Service added to database.');
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Service  $service
-     * @return \Illuminate\Http\Response
-     */
     public function show(Service $service)
     {
-        //
+        // $service = Service::where('slug');
+        return view('services.show', ['service' => $service]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Service  $service
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Service $service)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Service  $service
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Service $service)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Service  $service
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Service $service)
     {
         //

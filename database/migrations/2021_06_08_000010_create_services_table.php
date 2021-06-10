@@ -10,11 +10,11 @@ class CreateServicesTable extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 30);
-            $table->string('slug', 40);
-            $table->string('icon', 30);
+            $table->string('title', 30)->unique();
+            $table->string('slug', 40)->unique();
+            $table->string('icon', 30)->unique();
             $table->string('description_short', 200);
-            $table->string('description_long', 1000);
+            $table->text('description_long');
             $table->boolean('available')->default(1);
         });
     }
