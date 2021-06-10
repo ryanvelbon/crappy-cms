@@ -6,6 +6,7 @@ use App\Models\Service;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Database\QueryException;
 
 class ServiceController extends Controller
 {
@@ -35,10 +36,15 @@ class ServiceController extends Controller
             $service->available = 0;
         }
 
-        $service->save();
+        try {
+            $service->save();
+        }
+        catch(QueryException $e){
+            return Redirect::back()->withInput()
+                                    ->withError($e->getMessage());
+        }
 
-        return Redirect::back()->with('msg', 'Success! Service added to database.');
-
+        return Redirect::back()->withSuccess("Service added to database.");
     }
 
     public function show(Service $service)

@@ -6,15 +6,15 @@
 
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-	<input type="text" class="form-control" name="title" id="title" placeholder="Title">
+	<input type="text" class="form-control" name="title" id="title" placeholder="Title" value="{{ old('title') }}">
 	
-	<input type="text" class="form-control" name="slug" id="slug" placeholder="Slug">
+	<input type="text" class="form-control" name="slug" id="slug" placeholder="Slug" value="{{ old('slug') }}">
 
-	<input type="text" class="form-control" name="icon" id="icon" placeholder="Icon">
+	<input type="text" class="form-control" name="icon" id="icon" placeholder="Icon" value="{{ old('icon') }}">
 
-	<textarea class="form-control" name="short-desc" id="short-desc" rows="3" cols="50" placeholder="Short description"></textarea>
+	<textarea class="form-control" name="short-desc" id="short-desc" rows="3" cols="50" placeholder="Short description">{{ old('short-desc') }}</textarea>
 
-	<textarea class="form-control" name="long-desc" id="long-desc" rows="7" cols="50" placeholder="Long description"></textarea>
+	<textarea class="form-control" name="long-desc" id="long-desc" rows="7" cols="50" placeholder="Long description">{{ old('long-desc') }}</textarea>
 
 	<div class="form-check">
 		<input class="form-check-input" type="checkbox" name="available" id="available">
