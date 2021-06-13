@@ -66,10 +66,12 @@
 
 	.service-card {
 		background-color: $test5;
+		background-color: #eee1;
 		width: 300px;
 		padding: 10px 15px;
-		margin: 2px;
+		margin: 12px;
 		text-align: center;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
 		.card-icon {
 			background-color: $test1;
@@ -82,6 +84,19 @@
 		}
 		.card-body {
 			background-color: $test3;
+		}
+
+		transition: 0.5s;
+
+		&:hover {
+			background-color: $primary;
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+			i, h3 {
+				color: black;
+			}
+			p {
+				color: white;
+			}
 		}
 	}
 }

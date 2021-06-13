@@ -79,5 +79,7 @@ class ServiceController extends Controller
     public function destroy($id)
     {
         Service::destroy($id);
+
+        return redirect()->route('admin.dashboard')->withSuccess("Service has been deleted.");
     }
 }

@@ -7,6 +7,9 @@
 		padding: 20px;
 		text-align: center;
 	}
+	.table {
+		text-align: center;
+	}
 </style>
 @endsection
 
@@ -57,7 +60,7 @@
 						<td><a class="{{$service->icon}}"></a></td>
 						<td>{{$service->icon}}</td>
 						<td>{{$service->available}}</td>
-						<td><a class="btn btn-outline-success btn-sm" href="/services/{{$service->slug}}" role="button">View</a></td>
+						<td><a class="btn btn-outline-primary btn-sm" href="/services/{{$service->slug}}" role="button">View</a></td>
 						<td><a class="btn btn-outline-primary btn-sm" href="/admin/services/{{$service->id}}/edit" role="button">Edit</a></td>
 					</tr>
 				@endforeach

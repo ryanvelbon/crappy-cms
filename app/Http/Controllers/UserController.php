@@ -38,9 +38,4 @@ class UserController extends Controller
 		$services = Service::all();
 		return view('dashboard', ['services' => $services]);
 	}
-
-	// public function dashboard($msgs = [])
-	// {
-
-	// }
 }

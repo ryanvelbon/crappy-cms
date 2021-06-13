@@ -29,4 +29,10 @@
 	</div>
 	<input type="hidden" name="token" value="{{ Session::token() }}">
 </form>
+<br>
+<form method="POST" action="{{ route('admin.services.destroy', ['service' => $service->id]) }}">
+    @csrf
+    @method('DELETE')
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
 @endsection

@@ -52,22 +52,23 @@
 	</section>
 	<section class="row">
 		<div class="row-content">
-			<h2>Courses</h2>
+			<h2>Services</h2>
 			<!-- <p>Use the following icons: globe line-chart lightbulb-o cloud-upload mobile bullhorn</p> -->
 			<div id="serviceCardsContainer">
-				@for ($i = 0; $i < 6; $i++)
-				<div class="service-card">
+				@foreach($services as $service)
+				<div class="service-card div-link">
+					<a href="/services/{{$service->slug}}"><span></span></a>
 					<div class="card-icon">
-						<i class="fa fa-car"></i>
+						<i class="{{$service->icon}}"></i>
 					</div>
 					<div class="card-title">
-						<h3>Lorem Ipsum</h3>
+						<h3>{{$service->title}}</h3>
 					</div>
 					<div class="card-body">
-						<p>Sed ut perspiciatis unde omnis iste natus error sit <strong>voluptatem</strong> accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+						<p>{{$service->description_short}}</p>
 					</div>
 				</div>
-				@endfor
+				@endforeach
 			</div>
 		</div>
 	</section>
