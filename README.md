@@ -1,3 +1,22 @@
+## Auth
+
+Authentication system is solely for website admins.
+There is no page to sign up. Users are instead to be created from inside Tinker shell.
+
+	php artisan tinker
+	
+	$user = new User();
+	$user->name = "admin";
+	$user->email = "admin@example.com";
+	$user->password = Hash::make('12345678');
+	$user->save();
+
+## Content
+
+Content such as pages relevant to Services, Projects, Careers, should be managed through the admin panel.
+
+
+
 
 
 

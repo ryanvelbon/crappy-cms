@@ -50,13 +50,9 @@
 			</div>
 		</div>
 	</section>
-	<section class="row row-bg">
-		<div class="row-content">
-			<h2>Courses</h2>
-		</div>
-	</section>
 	<section class="row">
 		<div class="row-content">
+			<h2>Courses</h2>
 			<!-- <p>Use the following icons: globe line-chart lightbulb-o cloud-upload mobile bullhorn</p> -->
 			<div id="serviceCardsContainer">
 				@for ($i = 0; $i < 6; $i++)
@@ -75,13 +71,21 @@
 			</div>
 		</div>
 	</section>
-	<section class="hero" id="hero2">
-		<div class="hero-image">
-			<div class="hero-text">
-				<h1 style="font-size:50px">Rem numquam</h1>
+	<section class="row row-bg-img">
+		<div class="row-img">
+			<div class="row-text">
+				<h1>Rem numquam</h1>
 				<p>Inventore quia voluptas a voluptatum rerum. Quasi id ad inventore odio amet sed perferendis eos.</p>
 				<button class="btn btn-cta">get a quote</button>
 			</div>
 		</div>
 	</section>
+	<section class="row row-bg-primary">
+		<div class="row-content">
+			<h1>Rem numquam</h1>
+			<p>Inventore quia voluptas a voluptatum rerum. Quasi id ad inventore odio amet sed perferendis eos.</p>
+			<button class="btn btn-cta">get a quote</button>
+		</div>
+	</section>
+
 @endsection
